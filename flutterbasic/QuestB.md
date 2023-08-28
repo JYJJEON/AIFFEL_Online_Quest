@@ -24,17 +24,20 @@
 
 **답**: Navigator는 Flutter 앱에서 페이지 라우팅을 관리하는 객체입니다. Navigator는 일종의 스택 관리자로, 여러 `Route` 객체를 스택으로 관리합니다. `Navigator.push()` 메서드를 사용하여 새로운 페이지를 스택에 추가하거나 `Navigator.pop()` 메서드를 사용하여 현재 페이지를 스택에서 제거할 수 있습니다.
 
----
-
 ### 7. Route란 무엇인가요?
 
 **답**: Route는 Flutter 앱 내에서 화면 간의 이동 경로를 나타내는 개념입니다. Route는 앱의 한 페이지 또는 화면을 표현하며, Navigator는 이러한 Route들을 관리합니다. 
-
----
 
 ### 8. MaterialPageRoute와 CupertinoPageRoute는 어떻게 다른가요?
 
 **답**: `MaterialPageRoute`와 `CupertinoPageRoute`는 각각 Android와 iOS 스타일의 페이지 전환 애니메이션을 제공합니다. `MaterialPageRoute`는 Material Design에 기반한 애니메이션을, `CupertinoPageRoute`는 iOS 스타일의 애니메이션을 제공합니다.
 
----
+### 9. 자식 Widget에서 따로 규정하지 않은 속성은 부모 Widget에서 상속되는데요. 플러터에서 이렇게 Widget의 상속 기능은 왜 만들었을까요?
+**답**: 
+코드 재사용: 부모 위젯에서 설정한 속성을 자식 위젯이 자동으로 상속받음으로써, 중복 코드를 줄일 수 있습니다.
 
+일관성: 부모 위젯에서 설정한 스타일이나 특성을 자식 위젯들이 상속받아 사용하므로, 앱 전체에서 일관된 UI/UX를 제공할 수 있습니다.
+
+유지보수: 부모 위젯의 속성을 변경하면, 그 변경이 자식 위젯들에게도 자동으로 적용되므로 유지보수가 쉽습니다.
+
+성능 최적화: 상속을 통해 중복 코드를 줄이고, 계산을 최소화하여 앱의 성능을 향상시킬 수 있습니다.
